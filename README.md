@@ -27,4 +27,5 @@ docker run --rm -it -p 80:80 -p 8080:8080 --name traefik docker.io/library/traef
 to see it in action.
 
 ### Build status
-![Yaegi tests](https://github.com/esenac/traefik-custom-router/actions/workflows/main.yml/badge.svg)
+![Yaegi tests](https://github.com/esenac/traefik-custom-router/workflows/Go%20Matrix/badge.svg)
+![Cross compilatiob](https://github.com/esenac/traefik-custom-router/workflows/Main/badge.svg)
