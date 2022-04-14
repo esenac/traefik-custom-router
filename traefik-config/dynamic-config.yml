@@ -1,0 +1,21 @@
+http:
+  routers:
+    route-to-local-ip:
+      rule: "Host(`localhost`)"
+      service: service-foo
+      priority: 1000
+      entryPoints:
+        - web
+      middlewares:
+        - traefik-custom-router
+  services:
+    service-foo:
+      loadBalancer:
+        servers:
+          - url: http://localhost:80
+  middlewares:
+    traefik-custom-router:
+      plugin:
+        traefik-custom-router:
+          public: "https://www.google.com"
+          private: "https://www.apple.com"

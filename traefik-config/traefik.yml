@@ -1,0 +1,19 @@
+log:
+  level: DEBUG
+  filepath: "/etc/traefik/log/traefik.log"
+api:
+  dashboard: true
+  insecure: true
+  debug: true
+entryPoints:
+  web:
+    address: ":80"
+  websecure:
+    address: ":443"
+providers:
+  file:
+    filename: /etc/traefik/config/dynamic-config.yml
+experimental:
+  localPlugins:
+    traefik-custom-router:
+      moduleName: github.com/esenac/traefik-custom-router

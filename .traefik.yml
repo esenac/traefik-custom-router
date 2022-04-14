@@ -1,0 +1,10 @@
+displayName: Users custom router
+type: middleware
+
+import: github.com/esenac/traefik-custom-router
+
+summary: 'Routes users based on JWT sub'
+
+testData:
+  Logged: "https://www.google.com"
+  Unlogged: "https://www.apple.com"
