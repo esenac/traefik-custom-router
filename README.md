@@ -14,7 +14,7 @@ and a logged one (`public` private).
 
 Execute 
 ```
-docker build --ssh default --tag traefik-custom-router .  
+docker build --tag traefik-custom-router .  
 ```
 to build the Docker image.
 
@@ -25,3 +25,6 @@ Execute
 docker run --rm -it -p 80:80 -p 8080:8080 --name traefik docker.io/library/traefik-custom-router
 ```
 to see it in action.
+
+### Build status
+![Yaegi tests](https://github.com/esenac/traefik-custom-router/actions/workflows/main.yml/badge.svg)
